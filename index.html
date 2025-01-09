@@ -58,25 +58,19 @@
             color: #888;
         }
     </style>
-    <!-- Add AngularJS library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 <body ng-app="designApp" ng-controller="DesignController">
     <div class="container">
         <h1>Welcome to DesignUI!</h1>
-        <p>{{description}}</p>
+        <p>Suitable for beginners? We got you.</p>
+        <p>Use resources from DesignUI that is easy to use</p>
+        <p>DesignUI is free</p>
+        <p>DesignUI is open source</p>
+        <p>Images, text, any element you can use</p>
         <a href="https://github.com/electric-otter/DesignUI/archive/refs/tags/1.0.0.zip" class="download-button"><i class="fas fa-download"></i> Download DesignUI</a>
         <div class="footer">
             Licensed under GPL-v3.0
         </div>
     </div>
-
-    <script>
-        // Define the AngularJS module
-        var app = angular.module('designApp', []);
-        app.controller('DesignController', function($scope) {
-            $scope.description = 'DesignUI is an open source framework suitable for beginners.';
-        });
-    </script>
 </body>
 </html>
