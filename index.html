@@ -58,15 +58,29 @@
             color: #888;
         }
     </style>
+    <!-- Add Angular libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@angular/core@12.2.13/bundles/core.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@angular/common@12.2.13/bundles/common.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@angular/platform-browser@12.2.13/bundles/platform-browser.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@angular/platform-browser-dynamic@12.2.13/bundles/platform-browser-dynamic.umd.js"></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Add a root element for Angular app -->
+    <div class="container" ng-app="designApp" ng-controller="DesignController">
         <h1>Welcome to DesignUI!</h1>
-        <p>DesignUI is an open source framework suitable for beginners.</p>
+        <p>{{description}}</p>
         <a href="https://github.com/electric-otter/DesignUI/archive/refs/tags/1.0.0.zip" class="download-button"><i class="fas fa-download"></i> Download DesignUI</a>
         <div class="footer">
-            &copy; 2025 designUI Framework
+            Licensed under GPL-v3.0
         </div>
     </div>
+
+    <script>
+        // Define the Angular module
+        angular.module('designApp', [])
+        .controller('DesignController', function($scope) {
+            $scope.description = 'DesignUI is an open source framework suitable for beginners.';
+        });
+    </script>
 </body>
 </html>
