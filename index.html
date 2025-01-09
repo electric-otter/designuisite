@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignUI</title>
+    <title>DesignUI with AngularJS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -58,16 +58,12 @@
             color: #888;
         }
     </style>
-    <!-- Add Angular libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@angular/core@12.2.13/bundles/core.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@angular/common@12.2.13/bundles/common.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@angular/platform-browser@12.2.13/bundles/platform-browser.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@angular/platform-browser-dynamic@12.2.13/bundles/platform-browser-dynamic.umd.js"></script>
+    <!-- Add AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
-<body>
-    <!-- Add a root element for Angular app -->
-    <div class="container" ng-app="designApp" ng-controller="DesignController">
-        <h1>Welcome to DesignUI!</h1>
+<body ng-app="designApp" ng-controller="DesignController">
+    <div class="container">
+        <h1>Welcome to DesignUI with AngularJS!</h1>
         <p>{{description}}</p>
         <a href="https://github.com/electric-otter/DesignUI/archive/refs/tags/1.0.0.zip" class="download-button"><i class="fas fa-download"></i> Download DesignUI</a>
         <div class="footer">
@@ -76,9 +72,9 @@
     </div>
 
     <script>
-        // Define the Angular module
-        angular.module('designApp', [])
-        .controller('DesignController', function($scope) {
+        // Define the AngularJS module
+        var app = angular.module('designApp', []);
+        app.controller('DesignController', function($scope) {
             $scope.description = 'DesignUI is an open source framework suitable for beginners.';
         });
     </script>
